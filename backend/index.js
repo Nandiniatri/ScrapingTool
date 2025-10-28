@@ -82,28 +82,22 @@
 
 
 
+// index.js (backend)
 import express from "express";
-import fs from "fs";
 import cors from "cors";
 
 const app = express();
 app.use(cors());
-app.use(express.json());
 
-// Dummy data endpoint
-app.get("/api/data", (req, res) => {
-    fs.readFile("./data.json", "utf8", (err, data) => {
-        if (err) {
-            return res.status(500).json({ error: "File read error" });
-        }
-        const jsonData = JSON.parse(data);
-        res.json(jsonData);
-    });
+const users = [
+    { id: 1, name: "Nandini", role: "Frontend Developer" },
+    { id: 2, name: "Shivam", role: "Backend Developer" },
+    { id: 3, name: "Anjali Bhatt", role: "Backend Developer" }
+];
+
+app.get("/api/users", (req, res) => {
+    res.json(users);
 });
 
-app.get("/", (req, res) => {
-    res.send("✅ Backend is running...");
-});
+app.listen(4000, () => console.log("Server running on port 4000"));
 
-const PORT = 4000;
-app.listen(PORT, () => console.log(`🚀 Server running at http://localhost:${PORT}`));

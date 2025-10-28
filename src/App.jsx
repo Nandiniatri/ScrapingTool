@@ -1,11 +1,11 @@
 import './App.css'
-import ScrapingData from './frontend/ScrapingData'
+import Users from './frontend/simpleBackendDataFetch'
 
 function App() {
 
   return (
     <>
-      <ScrapingData />
+      <Users />
     </>
   )
 }

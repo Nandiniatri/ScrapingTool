@@ -191,58 +191,30 @@
 
 
 
-import React, { useEffect, useState } from "react";
 
-export default function ScrapingData() {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
 
-  const fetchData = async () => {
-    setLoading(true);
-    setError("");
-    try {
-      const res = await fetch("http://localhost:4000/api/data");
-      if (!res.ok) throw new Error("Backend error");
-      const json = await res.json();
-      setData(json);
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
 
-  return (
-    <div style={{ padding: 20, fontFamily: "Segoe UI" }}>
-      <h2>🧠 Dummy JSON Data from Backend</h2>
-      {loading && <p>⏳ Loading...</p>}
-      {error && <p style={{ color: "red" }}>❌ {error}</p>}
-      {data && (
+
+// Users.jsx
+import { useEffect, useState } from "react";
+
+export default function Users() {
+    const [users, setUsers] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:4000/api/users")
+            .then((res) => res.json())
+            .then((data) => setUsers(data))
+            .catch((err) => console.log(err));
+    }, []);
+ 
+    return (
         <div>
-          <p>Source: {data.source}</p>
-          <div style={{ display: "grid", gap: 8 }}>
-            {data.products.map((p) => (
-              <div
-                key={p.id}
-                style={{
-                  border: "1px solid #ddd",
-                  borderRadius: 8,
-                  padding: 10,
-                  background: "#fafafa",
-                }}
-              >
-                <strong>{p.name}</strong>
-                <div>{p.price} • ⭐ {p.rating}</div>
-              </div>
+            <h1>User List</h1>
+            {users.map((u) => (
+                    <p key={u.id}>{u.id}. {u.name} — {u.role}</p>
             ))}
-          </div>
         </div>
-      )}
-    </div>
-  );
+    );
 }
