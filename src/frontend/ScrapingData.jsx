@@ -1,35 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-export default function ScrapingData() {
-  const [quotes, setQuotes] = useState([]);
+export default function App() {
+  const [q, setQ] = useState("mobile");
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    fetch("http://localhost:4000/scrape")
-      .then((res) => res.json())
-      .then((data) => setQuotes(data))
-      .catch((err) => console.error(err));
-  }, []);
+  const fetchScrape = async () => {
+    setLoading(true);
+    try {
+      const res = await fetch(`http://localhost:4000/scrape-flipkart?q=${encodeURIComponent(q)}`);
+      const json = await res.json();
+      setData(json);
+    } catch (e) {
+      console.error(e);
+      setData({ error: e.message });
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
-    <div style={{ padding: "20px", fontFamily: "sans-serif" }}>
-      <h2>🕵️‍♂️ Web Scraping Demo (React + Node)</h2>
-      {quotes.length === 0 ? (
-        <p>Loading scraped data...</p>
-      ) : (
-        quotes.map((q, i) => (
-          <div
-            key={i}
-            style={{
-              border: "1px solid #ddd",
-              margin: "10px 0",
-              padding: "10px",
-              borderRadius: "10px",
-            }}
-          >
-            <p><strong>“{q.text}”</strong></p>
-            <p>— {q.author}</p>
-          </div>
-        ))
+    <div style={{ padding: 20 }}>
+      <h3>Flipkart Scrape Demo</h3>
+      <input value={q} onChange={e=>setQ(e.target.value)} />
+      <button onClick={fetchScrape}>Scrape</button>
+      {loading && <p>Loading…</p>}
+      {data && (
+        <pre style={{ whiteSpace: "pre-wrap" }}>{JSON.stringify(data, null, 2)}</pre>
       )}
     </div>
   );
