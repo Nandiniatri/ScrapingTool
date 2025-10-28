@@ -82,22 +82,47 @@
 
 
 
-// index.js (backend)
+// // index.js (backend) //example 1 simple data fetch
+// import express from "express";
+// import cors from "cors";
+
+// const app = express();
+// app.use(cors());
+
+// const users = [
+//     { id: 1, name: "Nandini", role: "Frontend Developer" },
+//     { id: 2, name: "Shivam", role: "Backend Developer" },
+//     { id: 3, name: "Anjali Bhatt", role: "Backend Developer" }
+// ];
+
+// app.get("/api/users", (req, res) => {
+//     res.json(users);
+// });
+
+// app.listen(4000, () => console.log("Server running on port 4000"));
+
+
+
+
+
+
+
 import express from "express";
 import cors from "cors";
+import fs from "fs";
 
 const app = express();
 app.use(cors());
 
-const users = [
-    { id: 1, name: "Nandini", role: "Frontend Developer" },
-    { id: 2, name: "Shivam", role: "Backend Developer" },
-    { id: 3, name: "Anjali Bhatt", role: "Backend Developer" }
-];
-
 app.get("/api/users", (req, res) => {
-    res.json(users);
+  // file read karna
+  fs.readFile("./data.json", "utf-8", (err, data) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).json({ message: "Error reading file" });
+    }
+    res.json(JSON.parse(data)); // JSON data send kar diya
+  });
 });
 
 app.listen(4000, () => console.log("Server running on port 4000"));
-
