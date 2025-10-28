@@ -1,5 +1,7 @@
 [
   { "id": 1, "name": "Nandini", "role": "Frontend Developer" },
   { "id": 2, "name": "Shivam", "role": "Backend Developer" },
-  { "id": 3, "name": "Anjali", "role": "Frontend Developer" }
+  { "id": 3, "name": "Anjali", "role": "Frontend Developer" },
+  { "id": 4, "name": "Nidhi", "role": "Backend Developer" },
+  { "id": 5, "name": "Supari", "role": "Frontend Developer" }
 ]

@@ -106,7 +106,6 @@
 
 
 
-
 import express from "express";
 import cors from "cors";
 import fs from "fs";
@@ -115,14 +114,13 @@ const app = express();
 app.use(cors());
 
 app.get("/api/users", (req, res) => {
-  // file read karna
   fs.readFile("./data.json", "utf-8", (err, data) => {
     if (err) {
-      console.error(err);
-      return res.status(500).json({ message: "Error reading file" });
+      console.error("Error reading file:", err);
+      return res.status(500).json({ message: "Error reading data file" });
     }
-    res.json(JSON.parse(data)); // JSON data send kar diya
+    res.json(JSON.parse(data));
   });
 });
 
-app.listen(4000, () => console.log("Server running on port 4000"));
+app.listen(4000, () => console.log("🚀 Server running on port 4000"));

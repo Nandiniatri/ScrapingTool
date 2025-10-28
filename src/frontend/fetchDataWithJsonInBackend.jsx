@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function Users() {
+export default function Users1() {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
