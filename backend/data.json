@@ -1,0 +1,9 @@
+{
+  "source": "backend-json",
+  "products": [
+    { "id": 1, "name": "Wildcraft Backpack", "price": "₹899", "rating": "4.3" },
+    { "id": 2, "name": "American Tourister Bag", "price": "₹2,199", "rating": "4.5" },
+    { "id": 3, "name": "Skybags Travel Bag", "price": "₹1,499", "rating": "4.2" },
+    { "id": 4, "name": "Puma Gym Bag", "price": "₹1,099", "rating": "4.1" }
+  ]
+}
