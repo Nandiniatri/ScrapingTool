@@ -106,6 +106,27 @@
 
 
 
+// import express from "express";
+// import cors from "cors";
+// import fs from "fs";
+
+// const app = express();
+// app.use(cors());
+
+// app.get("/api/users", (req, res) => {
+//   fs.readFile("./data.json", "utf-8", (err, data) => {
+//     if (err) {
+//       console.error("Error reading file:", err);
+//       return res.status(500).json({ message: "Error reading data file" });
+//     }
+//     res.json(JSON.parse(data));
+//   });
+// });
+
+// app.listen(4000, () => console.log("🚀 Server running on port 4000"));
+
+
+
 import express from "express";
 import cors from "cors";
 import fs from "fs";
@@ -113,14 +134,12 @@ import fs from "fs";
 const app = express();
 app.use(cors());
 
+// data.json file ek hi bar read kar rahe hain (startup me)
+const users = JSON.parse(fs.readFileSync("./data.json", "utf-8"));
+
+// API route
 app.get("/api/users", (req, res) => {
-  fs.readFile("./data.json", "utf-8", (err, data) => {
-    if (err) {
-      console.error("Error reading file:", err);
-      return res.status(500).json({ message: "Error reading data file" });
-    }
-    res.json(JSON.parse(data));
-  });
+  res.json(users);
 });
 
 app.listen(4000, () => console.log("🚀 Server running on port 4000"));
