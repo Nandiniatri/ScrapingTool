@@ -106,6 +106,24 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//yha par isme json se krra hai new file bana kar
 // import express from "express";
 // import cors from "cors";
 // import fs from "fs";
@@ -124,6 +142,7 @@
 // });
 
 // app.listen(4000, () => console.log("🚀 Server running on port 4000"));
+
 
 
 
