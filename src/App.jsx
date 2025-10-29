@@ -1,6 +1,7 @@
 import './App.css'
 import CollectiveWebsite from './frontend/CollectiveWebsite'
 import Users1 from './frontend/fetchDataWithJsonInBackend'
+import BooksData from './frontend/JeansData'
 import Users from './frontend/simpleBackendDataFetch'
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
     <>
       {/* <Users /> */}
       {/* <Users1 /> */}
-      <CollectiveWebsite />
+      {/* <CollectiveWebsite /> */}
+      <BooksData />
     </>
   )
 }
