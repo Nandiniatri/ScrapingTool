@@ -43,12 +43,49 @@
 
 
 
+
+
+// import puppeteer from "puppeteer";
+
+// const browser = await puppeteer.launch({
+//     headless: false, // 👈 Chrome ko visible mode me khol dega
+//     defaultViewport: null, // 👈 Full window size
+//     args: ["--start-maximized"], // 👈 Window maximize
+// });
+
+// const page = await browser.newPage();
+
+// await page.goto("https://en.wikipedia.org/wiki/Coronavirus", {
+//     waitUntil: "networkidle2",
+// });
+
+// await page.screenshot({ path: "wiki.png", fullPage: true });
+
+// console.log("✅ Screenshot saved as wiki.png");
+
+// const result = await page.evaluate(() => {
+//     let headingFromWeb = document.querySelectorAll(".mw-heading");
+//     const headingList = [...headingFromWeb];
+//     return headingList.map( h => h.innerText)
+// })
+
+// console.log(result);
+
+// await browser.close();
+
+// Browser ko close karna optional hai agar tu dekhna chahta hai
+// await browser.close();
+
+
+
+
+
 import puppeteer from "puppeteer";
 
 const browser = await puppeteer.launch({
-    headless: false, // 👈 Chrome ko visible mode me khol dega
-    defaultViewport: null, // 👈 Full window size
-    args: ["--start-maximized"], // 👈 Window maximize
+    headless: false,
+    defaultViewport: null,
+    args: ["--start-maximized"],
 });
 
 const page = await browser.newPage();
@@ -57,19 +94,15 @@ await page.goto("https://en.wikipedia.org/wiki/Coronavirus", {
     waitUntil: "networkidle2",
 });
 
+// Screenshot le lo
 await page.screenshot({ path: "wiki.png", fullPage: true });
 
-console.log("✅ Screenshot saved as wiki.png");
-
+// Headings extract karte hain
 const result = await page.evaluate(() => {
-    let headingFromWeb = document.querySelectorAll(".mw-heading");
-    const headingList = [...headingFromWeb];
-    return headingList.map( h => h.innerText)
-})
+    const headings = document.querySelectorAll(".mw-headline");
+    return Array.from(headings).map((h) => h.innerText);
+});
 
-console.log(result);
+console.log("🧠 Headings from Wikipedia page:\n", result);
 
-// await browser.close();
-
-// Browser ko close karna optional hai agar tu dekhna chahta hai
-// await browser.close();
+await browser.close();
