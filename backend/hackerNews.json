@@ -16,6 +16,14 @@
     "link": "https://news.ycombinator.com/from?site=affinity.studio"
   },
   {
+    "title": "Rouille – Rust Programming, in French",
+    "link": "https://github.com/bnjbvr/rouille"
+  },
+  {
+    "title": "github.com/bnjbvr",
+    "link": "https://news.ycombinator.com/from?site=github.com/bnjbvr"
+  },
+  {
     "title": "Kimi Linear: An Expressive, Efficient Attention Architecture",
     "link": "https://github.com/MoonshotAI/Kimi-Linear"
   },
@@ -40,12 +48,20 @@
     "link": "https://news.ycombinator.com/from?site=acma.gov.au"
   },
   {
-    "title": "Rouille – Rust Programming, in French",
-    "link": "https://github.com/bnjbvr/rouille"
+    "title": "Free software scares normal people",
+    "link": "https://danieldelaney.net/normal/"
   },
   {
-    "title": "github.com/bnjbvr",
-    "link": "https://news.ycombinator.com/from?site=github.com/bnjbvr"
+    "title": "danieldelaney.net",
+    "link": "https://news.ycombinator.com/from?site=danieldelaney.net"
+  },
+  {
+    "title": "987654321 / 123456789",
+    "link": "https://www.johndcook.com/blog/2025/10/26/987654321/"
+  },
+  {
+    "title": "johndcook.com",
+    "link": "https://news.ycombinator.com/from?site=johndcook.com"
   },
   {
     "title": "Modifying a radiation meter for (radioactive) rock collecting",
@@ -54,22 +70,6 @@
   {
     "title": "maurycyz.com",
     "link": "https://news.ycombinator.com/from?site=maurycyz.com"
-  },
-  {
-    "title": "NPM flooded with malicious packages downloaded more than 86k times",
-    "link": "https://arstechnica.com/security/2025/10/npm-flooded-with-malicious-packages-downloaded-more-than-86000-times/"
-  },
-  {
-    "title": "arstechnica.com",
-    "link": "https://news.ycombinator.com/from?site=arstechnica.com"
-  },
-  {
-    "title": "Free software scares normal people",
-    "link": "https://danieldelaney.net/normal/"
-  },
-  {
-    "title": "danieldelaney.net",
-    "link": "https://news.ycombinator.com/from?site=danieldelaney.net"
   },
   {
     "title": "Show HN: Quibbler – A critic for your coding agent that learns what you want",
@@ -88,12 +88,28 @@
     "link": "https://news.ycombinator.com/from?site=joshwcomeau.com"
   },
   {
-    "title": "987654321 / 123456789",
-    "link": "https://www.johndcook.com/blog/2025/10/26/987654321/"
+    "title": "John Carmack on mutable variables",
+    "link": "https://twitter.com/id_aa_carmack/status/1983593511703474196"
   },
   {
-    "title": "johndcook.com",
-    "link": "https://news.ycombinator.com/from?site=johndcook.com"
+    "title": "twitter.com/id_aa_carmack",
+    "link": "https://news.ycombinator.com/from?site=twitter.com/id_aa_carmack"
+  },
+  {
+    "title": "NPM flooded with malicious packages downloaded more than 86k times",
+    "link": "https://arstechnica.com/security/2025/10/npm-flooded-with-malicious-packages-downloaded-more-than-86000-times/"
+  },
+  {
+    "title": "arstechnica.com",
+    "link": "https://news.ycombinator.com/from?site=arstechnica.com"
+  },
+  {
+    "title": "Jack Kerouac, Malcolm Cowley, and the difficult birth of On the Road",
+    "link": "https://theamericanscholar.org/scrolling-through/"
+  },
+  {
+    "title": "theamericanscholar.org",
+    "link": "https://news.ycombinator.com/from?site=theamericanscholar.org"
   },
   {
     "title": "Israel demanded Google and Amazon use secret 'wink' to sidestep legal orders",
@@ -104,12 +120,12 @@
     "link": "https://news.ycombinator.com/from?site=theguardian.com"
   },
   {
-    "title": "Jack Kerouac, Malcolm Cowley, and the difficult birth of On the Road",
-    "link": "https://theamericanscholar.org/scrolling-through/"
+    "title": "Florian Schneider Collection: Instruments and equipment up for auction",
+    "link": "https://www.juliensauctions.com/en/articles/the-florian-schneider-collection-rare-instruments-and-iconic-equipment-from-kraftwerk"
   },
   {
-    "title": "theamericanscholar.org",
-    "link": "https://news.ycombinator.com/from?site=theamericanscholar.org"
+    "title": "juliensauctions.com",
+    "link": "https://news.ycombinator.com/from?site=juliensauctions.com"
   },
   {
     "title": "Exceptional Measurement of Chirality",
@@ -128,6 +144,14 @@
     "link": "https://news.ycombinator.com/from?site=github.com/itsfrank"
   },
   {
+    "title": "Zig's New Async I/O",
+    "link": "https://andrewkelley.me/post/zig-new-async-io-text-version.html"
+  },
+  {
+    "title": "andrewkelley.me",
+    "link": "https://news.ycombinator.com/from?site=andrewkelley.me"
+  },
+  {
     "title": "Show HN: I made a heatmap diff viewer for code reviews",
     "link": "https://0github.com/"
   },
@@ -144,36 +168,12 @@
     "link": "https://news.ycombinator.com/from?site=juliaobjects.github.io"
   },
   {
-    "title": "Zig's New Async I/O",
-    "link": "https://andrewkelley.me/post/zig-new-async-io-text-version.html"
-  },
-  {
-    "title": "andrewkelley.me",
-    "link": "https://news.ycombinator.com/from?site=andrewkelley.me"
-  },
-  {
-    "title": "Florian Schneider Collection: Instruments and equipment up for auction",
-    "link": "https://www.juliensauctions.com/en/articles/the-florian-schneider-collection-rare-instruments-and-iconic-equipment-from-kraftwerk"
-  },
-  {
-    "title": "juliensauctions.com",
-    "link": "https://news.ycombinator.com/from?site=juliensauctions.com"
-  },
-  {
     "title": "Denmark reportedly withdraws Chat Control proposal following controversy",
     "link": "https://therecord.media/demark-reportedly-withdraws-chat-control-proposal"
   },
   {
     "title": "therecord.media",
     "link": "https://news.ycombinator.com/from?site=therecord.media"
-  },
-  {
-    "title": "Show HN: Front End Fuzzy and Substring and Prefix Search",
-    "link": "https://github.com/m31coding/fuzzy-search"
-  },
-  {
-    "title": "github.com/m31coding",
-    "link": "https://news.ycombinator.com/from?site=github.com/m31coding"
   },
   {
     "title": "Roadmap for Improving the Type Checker",
@@ -184,6 +184,14 @@
     "link": "https://news.ycombinator.com/from?site=swift.org"
   },
   {
+    "title": "Show HN: Front End Fuzzy and Substring and Prefix Search",
+    "link": "https://github.com/m31coding/fuzzy-search"
+  },
+  {
+    "title": "github.com/m31coding",
+    "link": "https://news.ycombinator.com/from?site=github.com/m31coding"
+  },
+  {
     "title": "Launch HN: Propolis (YC X25) – Browser agents that QA your web app autonomously",
     "link": "https://app.propolis.tech/#/launch"
   },
@@ -192,12 +200,12 @@
     "link": "https://news.ycombinator.com/from?site=propolis.tech"
   },
   {
-    "title": "ANTML: Anthropic’s Markup Language",
-    "link": "https://karashiiro.leaflet.pub/3m4gf7geefs2l"
+    "title": "A Closer Look at Piezoelectric Crystal",
+    "link": "https://www.samaterials.com/content/a-closer-look-at-stressed-piezo-crystals.html"
   },
   {
-    "title": "leaflet.pub",
-    "link": "https://news.ycombinator.com/from?site=leaflet.pub"
+    "title": "samaterials.com",
+    "link": "https://news.ycombinator.com/from?site=samaterials.com"
   },
   {
     "title": "The Psychology of Portnoy: On the Making of Philip Roth's Groundbreaking Novel",
@@ -208,12 +216,12 @@
     "link": "https://news.ycombinator.com/from?site=lithub.com"
   },
   {
-    "title": "PlanetScale Offering $5 Databases",
-    "link": "https://planetscale.com/blog/5-dollar-planetscale"
+    "title": "Show HN: Status of my favorite bike share stations",
+    "link": "https://blog.alexboden.ca/toronto-bike-share-status/"
   },
   {
-    "title": "planetscale.com",
-    "link": "https://news.ycombinator.com/from?site=planetscale.com"
+    "title": "alexboden.ca",
+    "link": "https://news.ycombinator.com/from?site=alexboden.ca"
   },
   {
     "title": "ICE and the Smartphone Panopticon",
@@ -224,19 +232,11 @@
     "link": "https://news.ycombinator.com/from?site=newyorker.com"
   },
   {
-    "title": "Show HN: Status of my favorite bike share stations",
-    "link": "https://blog.alexboden.ca/toronto-bike-share-status/"
+    "title": "Show HN: Run a GitHub Actions step in a gVisor sandbox",
+    "link": "https://github.com/geomys/sandboxed-step"
   },
   {
-    "title": "alexboden.ca",
-    "link": "https://news.ycombinator.com/from?site=alexboden.ca"
-  },
-  {
-    "title": "Learn Multiplatform Z80 Assembly Programming with Vampires",
-    "link": "https://www.chibiakumas.com/z80/"
-  },
-  {
-    "title": "chibiakumas.com",
-    "link": "https://news.ycombinator.com/from?site=chibiakumas.com"
+    "title": "github.com/geomys",
+    "link": "https://news.ycombinator.com/from?site=github.com/geomys"
   }
 ]
