@@ -4,12 +4,11 @@ import fs from "fs";
 const browser = await puppeteer.launch({ headless: false });
 const page = await browser.newPage();
 
-// Myntra Lipstick page open karo
+
 await page.goto("https://www.myntra.com/lipstick", { waitUntil: "networkidle2" });
 
-// Data evaluate karna page ke andar
+
 const data = await page.evaluate(() => {
-  // sabhi product cards select kar rahe hain
   const products = document.querySelectorAll("li.product-base");
 
   return Array.from(products).map((item) => {
@@ -31,6 +30,6 @@ const data = await page.evaluate(() => {
 
 await browser.close();
 
-// Data ko file me likh do
+
 fs.writeFileSync("MyntraLipsticks.json", JSON.stringify(data, null, 2));
 console.log("✅ Data saved in MyntraLipsticks.json");
