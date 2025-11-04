@@ -1,6 +1,10 @@
-const express = require("express");
+import express from "express";
+import cors from "cors";
+
+// const express = require("express");
 
 const app = express();
+app.use(cors())
 
 const PORT = 4000;
 
