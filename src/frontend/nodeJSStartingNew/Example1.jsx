@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 const Example1 = () => {
     const [message , setMessage] = useState([]);
 
-    const fetchNodeExample1Data = () => {
-        const response = fetch();
-        const result = response.json();
+    const fetchNodeExample1Data = async() => {
+        const response = await fetch('http://localhost:4000');
+        const result = await response.json();
         setMessage(result);
     }
 
