@@ -5,7 +5,7 @@ const Example1 = () => {
 
     const fetchNodeExample1Data = async() => {
         const response = await fetch('http://localhost:4000/api');
-        const result = await response.json();
+        const result = await response.text();
         setMessage(result);
     }
 
