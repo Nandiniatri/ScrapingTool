@@ -1,14 +1,13 @@
 import express from "express";
 import cors from "cors";
 
-// const express = require("express");
 
 const app = express();
 app.use(cors())
 
 const PORT = 4000;
 
-app.get("/" , (req , res) => {
+app.get("/api" , (req , res) => {
     res.send("Hello World this is my first backend example");  
 })
 
