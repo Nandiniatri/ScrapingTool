@@ -4,7 +4,7 @@ const Example2 = () => {
     const [data , setData] = useState([]);
 
     const fetchUsers = async() => {
-        const response = await fetch("/api/users");
+        const response = await fetch("https://localhost:4000/api/users");
         const result = await response.json();
         setData(result);
     }

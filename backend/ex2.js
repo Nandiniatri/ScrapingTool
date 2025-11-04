@@ -4,6 +4,8 @@ import cors from "cors";
 const app = express();
 app.use(cors());
 
+const PORT = 4000;
+
 const users = [
     {id:1 , title:"Nandini Atri"}
 ]
@@ -12,4 +14,4 @@ app.get("/api/users" , (req , res) => {
     res.json(users);
 })
 
-app.listen(4000 , () => console.log("server running on port 4000"));
+app.listen(PORT , () => console.log(`server running on https://localhost:${PORT}`));
