@@ -4,7 +4,7 @@ const Example1 = () => {
     const [message , setMessage] = useState("loading.....");
 
     const fetchNodeExample1Data = async() => {
-        const response = await fetch('http://localhost:4000/api');
+        const response = await fetch('http://localhost:4000');
         const result = await response.text();
         setMessage(result);
     }

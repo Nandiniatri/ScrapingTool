@@ -7,7 +7,7 @@ app.use(cors())
 
 const PORT = 4000;
 
-app.get("/api" , (req , res) => {
+app.get("/" , (req , res) => {
     res.send("Hello World this is my first backend example");  
 })
 
