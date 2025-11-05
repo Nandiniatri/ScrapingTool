@@ -1,13 +1,16 @@
-import { supabase } from './supabaseClient.js'
+import { supabase } from "./supabaseClient"
 
-async function addUser(name, email) {
+async function getUsers() {
   const { data, error } = await supabase
     .from('users')
-    .insert({ name: name, email: email })
-  
-  if (error) console.error('Insert error:', error)
-  else console.log('Inserted user:', data)
+    .select('*') // sab column fetch karega
+
+  if (error) {
+    console.error('Fetch error:', error)
+  } else {
+    console.log('Users list:', data)
+  }
 }
 
-addUser('Anita', 'anita@example.com');
-
+// Test call
+getUsers()
