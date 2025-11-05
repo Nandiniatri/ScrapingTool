@@ -9,6 +9,5 @@ async function addUser(name, email) {
   else console.log('Inserted user:', data)
 }
 
-// Test call
-addUser('Anita', 'anita@example.com')
+addUser('Anita', 'anita@example.com');
 
