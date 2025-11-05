@@ -15,7 +15,7 @@ function App() {
       {/* <CollectiveWebsite /> */}
       {/* <BooksData /> */}
       {/* <Example1 /> */}
-      <Example2 />
+      {/* <Example2 /> */}
     </>
   )
 }
