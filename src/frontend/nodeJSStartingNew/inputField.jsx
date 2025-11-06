@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const InputField = () => {
     const [inputValueSave, setInputValueSave] = useState('');
-    const [saveData , setSaveData] = useState([]);
+    const [saveData, setSaveData] = useState([]);
 
     const handleText = (e) => {
         console.log(e.target.value);
@@ -10,14 +10,23 @@ const InputField = () => {
     }
 
     const handleSave = () => {
-        setSaveData(inputValueSave);
+        if (inputValueSave.trim() !== "") {
+            setSaveData([...saveData, inputValueSave]);
+            setInputValueSave("");
+        }
     }
 
     return (
         <>
-            <input type="text" onChange={handleText} />
+            <input type="text" onChange={handleText} value={inputValueSave}/>
             <button onClick={handleSave}>Save</button>
-            <h1>{saveData}</h1>
+            {saveData.map((item) => {
+                return (
+                    <ul>
+                        <li>{item}</li>
+                    </ul>
+                )
+            })}
         </>
     )
 }
