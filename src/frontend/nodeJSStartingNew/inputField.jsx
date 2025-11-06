@@ -85,7 +85,7 @@ const InputField = () => {
     return (
         <>
             <input type="text" onChange={handleText} value={inputValueSave} />
-            <button onClick={handleSave}>Save</button>
+            <button onClick={handleSave}>Add Note</button>
             <ul>
                 {saveData.map((item) => (
                     <li key={item.id}>{item.text}</li>
