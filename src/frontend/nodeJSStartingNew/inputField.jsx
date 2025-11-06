@@ -31,13 +31,17 @@
 
 // export default InputField;
 
+
+
+
+
 import { useState, useEffect } from "react";
 
 const InputField = () => {
     const [inputValueSave, setInputValueSave] = useState("");
     const [saveData, setSaveData] = useState([]);
 
-    // ✅ Fetch data from backend (run on first render)
+    
     const fetchNotes = async () => {
         try {
             const response = await fetch("http://localhost:4000/getNotes"); // 👈 http (not https)
@@ -48,7 +52,7 @@ const InputField = () => {
         }
     };
 
-    // ✅ Save data to backend
+    
     const handleSave = async () => {
         if (!inputValueSave.trim()) return alert("Enter something!");
 
@@ -60,14 +64,14 @@ const InputField = () => {
             });
 
             const result = await response.json();
-            setSaveData([...saveData, result.note]); // add new note to list
-            setInputValueSave(""); // clear input
+            setSaveData([...saveData, result.note]);
+            setInputValueSave("");
         } catch (error) {
             console.error("Error saving note:", error);
         }
     };
 
-    // ✅ Run once when component loads
+    
     useEffect(() => {
         fetchNotes();
     }, []);
