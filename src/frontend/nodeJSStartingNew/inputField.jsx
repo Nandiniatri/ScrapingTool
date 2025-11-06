@@ -18,15 +18,13 @@ const InputField = () => {
 
     return (
         <>
-            <input type="text" onChange={handleText} value={inputValueSave}/>
+            <input type="text" onChange={handleText} value={inputValueSave} />
             <button onClick={handleSave}>Save</button>
-            {saveData.map((item) => {
-                return (
-                    <ul>
-                        <li>{item}</li>
-                    </ul>
-                )
-            })}
+            <ul>
+                {saveData.map((item, index) => (
+                    <li key={index}>{item}</li>
+                ))}
+            </ul>
         </>
     )
 }
