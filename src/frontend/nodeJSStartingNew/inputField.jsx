@@ -44,8 +44,10 @@ const InputField = () => {
     
     const fetchNotes = async () => {
         try {
-            const response = await fetch("http://localhost:4000/getNotes"); // 👈 http (not https)
+            const response = await fetch("http://localhost:4000/getNotes");
             const result = await response.json();
+            console.log("result for note" , result);
+            
             setSaveData(result);
         } catch (error) {
             console.error("Error fetching notes:", error);
