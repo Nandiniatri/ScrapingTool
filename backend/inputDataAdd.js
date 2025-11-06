@@ -36,7 +36,7 @@
 
 import express from "express";
 import cors from "cors";
-import { supabase } from "./inputSupabase";
+import { supabase } from "./inputSupabase.js";
 
 const app = express();
 app.use(cors());
