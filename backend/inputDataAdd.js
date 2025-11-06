@@ -18,6 +18,7 @@ let notes = [];
 
 
 app.post("/addNote", (req, res) => {
+    console.log("👉 Received data:", req.body);
     const { text } = req.body;
     if (!text) {
         return res.status(400).json({ error: "Text is required" });
